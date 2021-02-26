@@ -1,17 +1,79 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="light">
+      <div class="flex">
+        <img src="assets/icon/logo.png" alt="logo" width="40%">
+      </div>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card id ="bmi">
+    <div class="flex1">
+      <div style="padding-left: 1rem;padding-top: 1rem;">
+        <ion-card-title><strong>BMI</strong></ion-card-title>
+        <ion-card-subtitle>You are Normal</ion-card-subtitle>
+      </div>
+      <div class="gauge-wrapper">
+        <div class="gauge four rischio3">
+          <div class="slice-colors">
+            <div class="st slice-item"></div>
+            <div class="st slice-item"></div>
+            <div class="st slice-item"></div>
+            <div class="st slice-item"></div>
+          </div>
+          <div class="needle"></div>
+          <div class="gauge-center">
+            <div class="label">RISK</div>
+            <div class="number">HIGH</div>
+          </div>    
+        </div>
+      </div>
+    </div>
+  </ion-card>
+  <div class="container">
+    <div class="card">
+      <div class= "face hidden">
+        <div class= "content">
+          <h2>Personal Trainer</h2>
+          <p>Personal training program customised accroding to height,weight,and recent physical activity.</p>
+          <ion-button color="danger" [routerLink]="'/tabs/per-trainer'" >Start</ion-button>
+        </div>
+      </div>
+      <div class="face front">
+          <img src="/assets/icon/train.png" alt="" width="70%">
+          <h2>Personal Trainer</h2>
+      </div>
+    </div>
+    <div class="card">
+      <div class= "face hidden">
+        <div class= "content">
+          <h2>Sixpack Lab</h2>
+          <p>A 12 week abs program from beginner to expert level. You can see results within 4 weeks.</p>
+          <ion-button color="warning" [routerLink]="'/tabs/tab2'">Start</ion-button>
+        </div>
+      </div>
+      <div class="face front">
+        <img src="/assets/icon/sixpack.png" alt="" width="50%">
+        <h2>Sixpack Lab</h2>
+      </div>
+    </div>
+    <div class="card">
+      <div class= "face hidden">
+        <div class= "content">
+          <h2>Workout Database</h2>
+          <p>You can explore workouts for all muscle groups</p>
+          <ion-button color="secondary" [routerLink]="'/tabs/tab2'">Explore</ion-button>
+        </div>
+      </div>
+      <div class="face front">
+        <img src="/assets/icon/workouts.png" alt="" width="50%" style="margin-bottom: 1rem;">
+        <h2>Workout Database</h2>
+      </div>
+    </div>
+  </div>
 </ion-content>

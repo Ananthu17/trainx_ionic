@@ -1,0 +1,14 @@
+ion-toolbar {
+    --background: #373837;
+  }
+  ion-content{
+    --background:radial-gradient(rgb(167, 167, 167),rgb(65, 61, 61));
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.flex img{
+    margin-top: 2px;
+}
